@@ -1,0 +1,17 @@
+name: Hello World Workflow
+
+# triggers the workflow on every push
+on: [push]
+
+# groups the steps to be run
+jobs:
+  say-hello:
+    # specifies the environment
+    runs-on: ubuntu-latest
+    # check out code and run a shell command
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Say Hello
+        run: echo "👋 Hello from your first GitHub Action!"
