@@ -1,0 +1,17 @@
+name: print current date workflow
+
+# triggers the workflow on every push
+on: [push]
+
+# groups the steps to be run
+jobs:
+  print-date:
+    # specifies the environment
+    runs-on: ubuntu-latest
+    # check out code and run a shell command
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Print Date
+        run: date
